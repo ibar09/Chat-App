@@ -1,0 +1,47 @@
+/* Add to a CSS file or use a <style> tag */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(135deg, #481089, #000000) border-box;
+}
+
+.card {
+  border-radius: 15px;
+  background: #000000 !important; /* Dark card background */
+  color: #fff;
+}
+.title {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin: 20px 0;
+}
+.title span {
+  color: #963aff;
+}
+label {
+  color: white;
+  text-align: left;
+}
+
+.card .form-control {
+  background: #ffffff !important; /* Input background */
+  border: none;
+  color: #fff;
+  margin: 0px 0px;
+}
+
+.card .form-control:focus {
+  background-color: #555;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  border: 1px solid #007bff; /* Primary color border */
+}
+
+.card .btn-primary {
+  background: linear-gradient(135deg, #963aff, #390970) border-box;
+  border-radius: 63px !important;
+}
+
+.card .btn-primary:hover {
+  background-color: #0056b3;
+}

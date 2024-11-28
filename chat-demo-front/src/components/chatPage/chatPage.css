@@ -1,0 +1,96 @@
+/* ChatRoom.css */
+.body {
+  background: linear-gradient(135deg, #481089, #000000) border-box;
+}
+.chat-container {
+  border-radius: 15px;
+  background: linear-gradient(135deg, #000000, #1b1b1b) border-box;
+  color: #fff;
+}
+
+.chat-title {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.input-area {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.chat-window {
+  background-color: rgb(109, 22, 22) 505 !important; /* Chat window background */
+  margin: 0;
+  display: grid;
+  place-content: inherit;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+}
+
+.chat-message {
+  --r: 1em; /* the radius */
+  --t: 1.5em; /* the size of the tail */
+  margin: 10px;
+  max-width: 300px;
+
+  padding: 1em;
+  border-inline: var(--t) solid #0000;
+  border-radius: calc(var(--r) + var(--t)) / var(--r);
+  mask: radial-gradient(100% 100% at var(--_p) 0, #0000 99%, #000 102%)
+      var(--_p) 100% / var(--t) var(--t) no-repeat,
+    linear-gradient(#000 0 0) padding-box;
+  color: #fff;
+  text-align: left;
+}
+.left {
+  background: linear-gradient(135deg, #963aff, #390970) border-box;
+
+  --_p: 0;
+  border-bottom-left-radius: 0 0;
+  place-self: start;
+}
+.right {
+  --_p: 100%;
+  border-bottom-right-radius: 0 0;
+  background: linear-gradient(135deg, #171717, #434343) border-box;
+
+  place-self: end;
+}
+
+.chat-message:hover {
+  background-color: #666; /* Slightly lighter on hover */
+}
+
+.chat-input {
+  border: none;
+}
+
+.chat-input:focus {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.send-button {
+  background: linear-gradient(135deg, #963aff, #390970) border-box;
+  color: white !important;
+  border-radius: 63px !important;
+
+  text-align: center;
+  margin: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header h3 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.logout-button {
+  background: linear-gradient(135deg, #963aff, #390970) border-box;
+  border-radius: 63px !important;
+  color: white !important;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
