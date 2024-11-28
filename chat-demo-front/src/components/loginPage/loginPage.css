@@ -1,4 +1,3 @@
-/* Add to a CSS file or use a <style> tag */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -8,7 +7,7 @@ body {
 
 .card {
   border-radius: 15px;
-  background: #000000 !important; /* Dark card background */
+  background: #000000 !important;
   color: #fff;
 }
 .title {
@@ -25,7 +24,7 @@ label {
 }
 
 .card .form-control {
-  background: #ffffff !important; /* Input background */
+  background: #ffffff !important;
   border: none;
   color: #fff;
   margin: 0px 0px;
@@ -34,7 +33,7 @@ label {
 .card .form-control:focus {
   background-color: #555;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-  border: 1px solid #007bff; /* Primary color border */
+  border: 1px solid #007bff;
 }
 
 .card .btn-primary {

@@ -69,10 +69,8 @@ const LoginPage = () => {
           </div>
         </form>
 
-        {/* Error Message */}
         {error && <p className="text-danger text-center mt-3">{error}</p>}
 
-        {/* Footer */}
         <div className="text-center mt-3">
           <small>
             Don't have an account? <a className="text-primary">Sign up</a>

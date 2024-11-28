@@ -66,9 +66,6 @@ const ChatPage = () => {
           </button>
         </div>
 
-        {/* <h1 className="chat-title text-center mb-4">Chat Room</h1> */}
-
-        {/* Chat Window */}
         <div
           className="chat-window rounded mb-3 mt-3"
           style={{ maxHeight: "400px", overflowY: "auto" }}
@@ -84,7 +81,6 @@ const ChatPage = () => {
           )}
         </div>
 
-        {/* Input Area */}
         <div className="input-area">
           <input
             className="form-control me-2 chat-input bg-dark"

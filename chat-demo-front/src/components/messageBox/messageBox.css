@@ -4,8 +4,8 @@
 }
 
 .chat-message {
-  --r: 1em; /* the radius */
-  --t: 1.5em; /* the size of the tail */
+  --r: 1em;
+  --t: 1.5em;
   margin: 10px;
   max-width: 300px;
 
