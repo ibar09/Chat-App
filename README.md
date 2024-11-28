@@ -1,13 +1,10 @@
-Here’s a suggested GitHub README for your project based on the provided architecture diagram and our past discussions:
-
----
 
 # **React-NestJS Chat Application**
 
 A full-stack real-time chat application using **React**, **NestJS**, **TypeORM**, **MySQL**, and **Socket.IO**. The application features secure authentication with **JWT** and a role-based structure, offering APIs for user management and real-time communication via WebSockets.
 
 ---
-
+![alt text](https://github.com/ibar09/Chat-App/blob/master/Diag.png?raw=true)
 ## **Features**
 
 - **Authentication**:  
