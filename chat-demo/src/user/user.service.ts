@@ -17,18 +17,22 @@ export class UserService {
     return this.userRepository.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
+  async findOne(id: number): Promise<User | undefined> {
+    return this.userRepository.findOne({ where: { id } });
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  async update(id: number, updateUserDto: UpdateUserDto): Promise<User> {
+    const user = await this.userRepository.findOne({ where: { id } });
+    if (!user) {
+      throw new Error('User not found');
+    }
+    await this.userRepository.update(id, updateUserDto);
+    return this.userRepository.findOne({ where: { id } });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  async remove(id: number): Promise<void> {
+    await this.userRepository.delete(id);
   }
-
   async create(user: CreateUserDto): Promise<User> {
     const hashedPassword = await bcrypt.hash(user.password, 10);
     const newUser = this.userRepository.create({

@@ -25,14 +25,19 @@ let UserService = class UserService {
     findAll() {
         return this.userRepository.find();
     }
-    findOne(id) {
-        return `This action returns a #${id} user`;
+    async findOne(id) {
+        return this.userRepository.findOne({ where: { id } });
     }
-    update(id, updateUserDto) {
-        return `This action updates a #${id} user`;
+    async update(id, updateUserDto) {
+        const user = await this.userRepository.findOne({ where: { id } });
+        if (!user) {
+            throw new Error('User not found');
+        }
+        await this.userRepository.update(id, updateUserDto);
+        return this.userRepository.findOne({ where: { id } });
     }
-    remove(id) {
-        return `This action removes a #${id} user`;
+    async remove(id) {
+        await this.userRepository.delete(id);
     }
     async create(user) {
         const hashedPassword = await bcrypt.hash(user.password, 10);

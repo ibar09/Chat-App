@@ -28,7 +28,6 @@ let GateWay = class GateWay {
     afterInit(client) {
         this.logger.log('Gateway initialized');
         client.use(async (req, next) => {
-            console.log('test');
             const token = jwt_guard_1.WsJwtAuthGuard.extractTokenFromHandshake(req);
             if (!token) {
                 return next(new websockets_1.WsException('Unauthorized'));
@@ -51,7 +50,6 @@ let GateWay = class GateWay {
         this.logger.log(`Client disconnected: ${socket.id}`);
     }
     onMessage(message) {
-        this.logger.log(message);
         this.server.emit('reply', message);
     }
 };

@@ -8,8 +8,8 @@ export class WsJwtAuthGuard extends AuthGuard('jwt') {
   canActivate(
     context: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
-    const client = context.switchToWs().getClient(); // Access WebSocket client
-    const token = WsJwtAuthGuard.extractTokenFromHandshake(client); // Extract JWT from handshake
+    const client = context.switchToWs().getClient();
+    const token = WsJwtAuthGuard.extractTokenFromHandshake(client);
 
     if (!token) {
       throw new WsException('Unauthorized');

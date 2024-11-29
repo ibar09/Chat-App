@@ -33,7 +33,6 @@ export class GateWay
   afterInit(client: Socket) {
     this.logger.log('Gateway initialized');
     client.use(async (req, next) => {
-      console.log('test');
       const token = WsJwtAuthGuard.extractTokenFromHandshake(req);
       if (!token) {
         return next(new WsException('Unauthorized'));
@@ -57,7 +56,6 @@ export class GateWay
 
   @SubscribeMessage('message')
   onMessage(@MessageBody() message: any) {
-    this.logger.log(message);
-    this.server.emit('reply', message); // Send message to all clients
+    this.server.emit('reply', message);
   }
 }

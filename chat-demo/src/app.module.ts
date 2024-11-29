@@ -20,7 +20,7 @@ import { ConversationModule } from './conversation/conversation.module';
       password: process.env.DB_PASSWORD || '',
       database: process.env.DB_NAME || 'chat_app',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true, // Disable in production
+      synchronize: true,
     }),
     GateWayModule,
     UserModule,
