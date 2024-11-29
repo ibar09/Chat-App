@@ -1,5 +1,5 @@
 
-# **React-NestJS Chat Application**
+# **Your Demo Chat Application**
 
 A full-stack real-time chat application using **React**, **NestJS**, **TypeORM**, **MySQL**, and **Socket.IO**. The application features secure authentication with **JWT** and a role-based structure, offering APIs for user management and real-time communication via WebSockets.
 
